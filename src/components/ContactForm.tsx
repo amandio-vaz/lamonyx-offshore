@@ -5,14 +5,45 @@ import { useState, FormEvent } from "react";
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const handleSubmit = (e: FormEvent) => {
+  const [formData, setFormData] = useState({
+    nome: "",
+    email: "",
+    empresa: "",
+    telefone: "",
+    area: "Cibersegurança & Defesa Perimetral",
+    mensagem: "",
+  });
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    setErrorMessage(null);
+
+    try {
+      const response = await fetch("/api/contato", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Falha ao enviar mensagem. Tente novamente.");
+      }
+
       setSubmitted(true);
-    }, 1000);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setErrorMessage(err.message);
+      } else {
+        setErrorMessage("Ocorreu um erro inesperado ao enviar. Tente novamente.");
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -46,7 +77,9 @@ export default function ContactForm() {
               </div>
               <div>
                 <h4 className="font-display font-bold text-theme-heading text-base">Atendimento Corporativo</h4>
-                <p className="text-sm text-theme-body">contato@lamonyx.com.br</p>
+                <a href="mailto:contato@lamonyx.com.br" className="text-sm text-[#38C6D8] hover:underline font-mono">
+                  contato@lamonyx.com.br
+                </a>
               </div>
             </div>
 
@@ -75,7 +108,17 @@ export default function ContactForm() {
                   Um dos nossos engenheiros de arquitetura entrará em contato em até 2 horas úteis para agendar o diagnóstico técnico.
                 </p>
                 <button
-                  onClick={() => setSubmitted(false)}
+                  onClick={() => {
+                    setSubmitted(false);
+                    setFormData({
+                      nome: "",
+                      email: "",
+                      empresa: "",
+                      telefone: "",
+                      area: "Cibersegurança & Defesa Perimetral",
+                      mensagem: "",
+                    });
+                  }}
                   className="mt-4 px-6 py-2.5 rounded-full border border-theme text-xs font-mono-tag text-theme-heading hover:border-[#38C6D8]"
                 >
                   Enviar Outra Mensagem
@@ -83,12 +126,20 @@ export default function ContactForm() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                {errorMessage && (
+                  <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-mono">
+                    ⚠️ {errorMessage}
+                  </div>
+                )}
+
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
                     <label className="font-mono-tag text-xs text-theme-body block mb-2">SEU NOME *</label>
                     <input
                       type="text"
                       required
+                      value={formData.nome}
+                      onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
                       placeholder="Ex: Carlos Silva"
                       className="w-full bg-theme-alt border border-theme rounded-xl px-4 py-3.5 text-theme-heading placeholder-theme-body/50 focus:border-[#38C6D8] outline-none text-sm transition-colors"
                     />
@@ -98,6 +149,8 @@ export default function ContactForm() {
                     <input
                       type="email"
                       required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="carlos@empresa.com.br"
                       className="w-full bg-theme-alt border border-theme rounded-xl px-4 py-3.5 text-theme-heading placeholder-theme-body/50 focus:border-[#38C6D8] outline-none text-sm transition-colors"
                     />
@@ -110,6 +163,8 @@ export default function ContactForm() {
                     <input
                       type="text"
                       required
+                      value={formData.empresa}
+                      onChange={(e) => setFormData({ ...formData, empresa: e.target.value })}
                       placeholder="Nome da sua organização"
                       className="w-full bg-theme-alt border border-theme rounded-xl px-4 py-3.5 text-theme-heading placeholder-theme-body/50 focus:border-[#38C6D8] outline-none text-sm transition-colors"
                     />
@@ -119,6 +174,8 @@ export default function ContactForm() {
                     <input
                       type="tel"
                       required
+                      value={formData.telefone}
+                      onChange={(e) => setFormData({ ...formData, telefone: e.target.value })}
                       placeholder="(21) 99999-9999"
                       className="w-full bg-theme-alt border border-theme rounded-xl px-4 py-3.5 text-theme-heading placeholder-theme-body/50 focus:border-[#38C6D8] outline-none text-sm transition-colors"
                     />
@@ -127,7 +184,11 @@ export default function ContactForm() {
 
                 <div>
                   <label className="font-mono-tag text-xs text-theme-body block mb-2">ÁREA DE INTERESSE PRINCIPAL *</label>
-                  <select className="w-full bg-theme-alt border border-theme rounded-xl px-4 py-3.5 text-theme-heading focus:border-[#38C6D8] outline-none text-sm transition-colors">
+                  <select
+                    value={formData.area}
+                    onChange={(e) => setFormData({ ...formData, area: e.target.value })}
+                    className="w-full bg-theme-alt border border-theme rounded-xl px-4 py-3.5 text-theme-heading focus:border-[#38C6D8] outline-none text-sm transition-colors"
+                  >
                     <option>Cibersegurança & Defesa Perimetral</option>
                     <option>Observabilidade & IA Preditiva</option>
                     <option>Backup Imutável & Disaster Recovery</option>
@@ -141,6 +202,8 @@ export default function ContactForm() {
                   <label className="font-mono-tag text-xs text-theme-body block mb-2">RESUMO DO SEU CENÁRIO / DESAFIO</label>
                   <textarea
                     rows={4}
+                    value={formData.mensagem}
+                    onChange={(e) => setFormData({ ...formData, mensagem: e.target.value })}
                     placeholder="Conte-nos brevemente sobre o tamanho do ambiente, desafios atuais de segurança ou indisponibilidade..."
                     className="w-full bg-theme-alt border border-theme rounded-xl px-4 py-3.5 text-theme-heading placeholder-theme-body/50 focus:border-[#38C6D8] outline-none text-sm transition-colors resize-none"
                   />
@@ -151,7 +214,7 @@ export default function ContactForm() {
                   disabled={loading}
                   className="w-full inline-flex items-center justify-center gap-2 py-4 rounded-full bg-[#38C6D8] text-[#0a1420] font-display font-bold hover:bg-theme-heading hover:text-theme-page transition-all shadow-xl shadow-[#38C6D8]/20 disabled:opacity-50"
                 >
-                  {loading ? "Processando envio..." : "Enviar Solicitação de Diagnóstico"}
+                  {loading ? "Enviando solicitação..." : "Enviar Solicitação de Diagnóstico"}
                 </button>
 
                 <p className="text-[0.68rem] text-center text-theme-body font-mono">

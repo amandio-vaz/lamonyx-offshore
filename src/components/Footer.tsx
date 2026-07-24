@@ -20,12 +20,7 @@ export default function Footer() {
               Mais do que implementar tecnologia, a Lamonyx constrói ecossistemas inteligentes capazes de monitorar, proteger, automatizar e antecipar riscos.
             </p>
 
-            <div className="pt-2 flex flex-wrap gap-2">
-              <span className="px-2.5 py-1 rounded bg-[#12202f] border border-white/10 text-[0.65rem] font-mono text-white">NIST CSF 2.0</span>
-              <span className="px-2.5 py-1 rounded bg-[#12202f] border border-white/10 text-[0.65rem] font-mono text-white">IEC 62443</span>
-              <span className="px-2.5 py-1 rounded bg-[#12202f] border border-white/10 text-[0.65rem] font-mono text-white">ISO 27001</span>
-              <span className="px-2.5 py-1 rounded bg-[#12202f] border border-white/10 text-[0.65rem] font-mono text-[#38C6D8]">Fortinet & Cisco Certified</span>
-            </div>
+
           </div>
 
           {/* Col 3: Soluções */}

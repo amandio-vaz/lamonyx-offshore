@@ -39,13 +39,13 @@ export default function Navbar() {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-10 h-22">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-20">
         {/* Brand Logo with Glow Accent */}
-        <a href="#top" className="flex items-center gap-3.5 group">
-          <div className="relative flex items-center justify-center w-11 h-11 rounded-2xl bg-[#38C6D8]/10 border border-[#38C6D8]/30 group-hover:border-[#38C6D8] group-hover:shadow-[0_0_20px_rgba(56,198,216,0.35)] transition-all">
+        <a href="#top" className="flex items-center gap-3 shrink-0 group">
+          <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-[#38C6D8]/10 border border-[#38C6D8]/30 group-hover:border-[#38C6D8] group-hover:shadow-[0_0_18px_rgba(56,198,216,0.35)] transition-all">
             <svg
-              width="26"
-              height="26"
+              width="24"
+              height="24"
               viewBox="0 0 40 40"
               fill="none"
               className="text-[#38C6D8]"
@@ -70,56 +70,56 @@ export default function Navbar() {
             </svg>
           </div>
           <div className="flex flex-col">
-            <span className="font-display font-bold tracking-[0.18em] text-white text-xl leading-none">
+            <span className="font-display font-bold tracking-[0.16em] text-white text-lg sm:text-xl leading-none">
               LAMONYX
             </span>
-            <span className="font-mono-tag text-[0.6rem] text-[#38C6D8] tracking-[0.2em] mt-1 font-semibold">
+            <span className="font-mono-tag text-[0.58rem] text-[#38C6D8] tracking-[0.18em] mt-1 font-semibold whitespace-nowrap">
               INTELLIGENT ECOSYSTEMS
             </span>
           </div>
         </a>
 
-        {/* Desktop Navigation Links */}
-        <div className="hidden lg:flex items-center gap-9">
+        {/* Desktop Navigation Links (Visible on XL screens to prevent truncation) */}
+        <div className="hidden xl:flex items-center gap-7">
           <a
             href="#solucoes"
-            className="font-mono-tag text-[#90a3b4] hover:text-[#38C6D8] transition-colors duration-150 tracking-wider text-xs"
+            className="font-mono-tag text-[#90a3b4] hover:text-[#38C6D8] transition-colors duration-150 tracking-wider text-xs whitespace-nowrap"
           >
             Soluções
           </a>
           <a
             href="#ecossistema"
-            className="font-mono-tag text-[#90a3b4] hover:text-[#38C6D8] transition-colors duration-150 tracking-wider text-xs"
+            className="font-mono-tag text-[#90a3b4] hover:text-[#38C6D8] transition-colors duration-150 tracking-wider text-xs whitespace-nowrap"
           >
-            Ecossistema Tecnológico
+            Tecnologias
           </a>
           <a
             href="#arquitetura"
-            className="font-mono-tag text-[#90a3b4] hover:text-[#38C6D8] transition-colors duration-150 tracking-wider text-xs"
+            className="font-mono-tag text-[#90a3b4] hover:text-[#38C6D8] transition-colors duration-150 tracking-wider text-xs whitespace-nowrap"
           >
             Arquitetura & IA
           </a>
           <a
             href="#contato"
-            className="font-mono-tag text-[#90a3b4] hover:text-[#38C6D8] transition-colors duration-150 tracking-wider text-xs"
+            className="font-mono-tag text-[#90a3b4] hover:text-[#38C6D8] transition-colors duration-150 tracking-wider text-xs whitespace-nowrap"
           >
             Contato
           </a>
         </div>
 
-        {/* Right Actions: NOC Status + Theme Switcher + CTA */}
-        <div className="hidden lg:flex items-center gap-5">
+        {/* Right Actions: NOC Status + Theme Switcher + CTA Button */}
+        <div className="hidden xl:flex items-center gap-4 shrink-0">
           {/* NOC Active Indicator */}
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#46C48E]/10 border border-[#46C48E]/30">
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#46C48E]/10 border border-[#46C48E]/30 whitespace-nowrap">
             <span className="w-2 h-2 rounded-full bg-[#46C48E] animate-pulse" />
-            <span className="font-mono-tag text-[0.65rem] text-[#46C48E] font-bold">NOC 24/7 ONLINE</span>
+            <span className="font-mono-tag text-[0.62rem] text-[#46C48E] font-bold">NOC 24/7 ONLINE</span>
           </div>
 
           {/* Interactive Dark/Light Theme Switcher Toggle */}
           <button
             onClick={toggleTheme}
             type="button"
-            className="relative w-14 h-7 rounded-full bg-[#12202f] border border-white/20 hover:border-[#38C6D8]/60 transition-all flex items-center px-1 group cursor-pointer"
+            className="relative w-13 h-7 rounded-full bg-[#12202f] border border-white/20 hover:border-[#38C6D8]/60 transition-all flex items-center px-1 group cursor-pointer shrink-0"
             title={isDarkMode ? "Alternar para Modo Claro" : "Alternar para Modo Escuro"}
           >
             {/* Sun Icon */}
@@ -150,7 +150,7 @@ export default function Navbar() {
             {/* Moving Toggle Thumb */}
             <span
               className={`w-5 h-5 rounded-full bg-[#38C6D8] shadow-md transition-transform duration-300 flex items-center justify-center ${
-                isDarkMode ? "translate-x-7" : "translate-x-0"
+                isDarkMode ? "translate-x-6" : "translate-x-0"
               }`}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#0a1420]" />
@@ -159,16 +159,16 @@ export default function Navbar() {
 
           <a
             href="#contato"
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#38C6D8] text-[#0a1420] font-display font-semibold text-sm hover:bg-white transition-all shadow-lg shadow-[#38C6D8]/20 hover:shadow-[#38C6D8]/40"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#38C6D8] text-[#0a1420] font-display font-semibold text-xs sm:text-sm hover:bg-white transition-all shadow-lg shadow-[#38C6D8]/20 hover:shadow-[#38C6D8]/40 whitespace-nowrap"
           >
-            Falar com Arquiteto
+            Falar com Comercial
           </a>
         </div>
 
-        {/* Mobile Menu Toggle Button */}
+        {/* Mobile / Tablet Menu Toggle Button (Visible below XL screens) */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 text-white hover:text-[#38C6D8]"
+          className="xl:hidden p-2.5 text-white hover:text-[#38C6D8] rounded-lg hover:bg-white/5 transition-colors"
           aria-label="Abrir Menu"
         >
           {mobileMenuOpen ? (
@@ -183,39 +183,39 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0a1420]/98 backdrop-blur-2xl border-b border-white/10 px-6 py-6 space-y-4">
+        <div className="xl:hidden bg-[#0a1420]/98 backdrop-blur-2xl border-b border-white/10 px-6 py-6 space-y-4 shadow-2xl">
           <a
             href="#solucoes"
             onClick={() => setMobileMenuOpen(false)}
-            className="block font-mono-tag text-lg text-[#90a3b4] hover:text-[#38C6D8]"
+            className="block font-mono-tag text-base text-[#90a3b4] hover:text-[#38C6D8]"
           >
             Soluções
           </a>
           <a
             href="#ecossistema"
             onClick={() => setMobileMenuOpen(false)}
-            className="block font-mono-tag text-lg text-[#90a3b4] hover:text-[#38C6D8]"
+            className="block font-mono-tag text-base text-[#90a3b4] hover:text-[#38C6D8]"
           >
-            Ecossistema Tecnológico
+            Tecnologias
           </a>
           <a
             href="#arquitetura"
             onClick={() => setMobileMenuOpen(false)}
-            className="block font-mono-tag text-lg text-[#90a3b4] hover:text-[#38C6D8]"
+            className="block font-mono-tag text-base text-[#90a3b4] hover:text-[#38C6D8]"
           >
             Arquitetura & IA
           </a>
           <a
             href="#contato"
             onClick={() => setMobileMenuOpen(false)}
-            className="block font-mono-tag text-lg text-[#90a3b4] hover:text-[#38C6D8]"
+            className="block font-mono-tag text-base text-[#90a3b4] hover:text-[#38C6D8]"
           >
             Contato
           </a>
           <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-            <span className="font-mono-tag text-sm text-[#90a3b4]">Tema de Cores</span>
+            <span className="font-mono-tag text-xs text-[#90a3b4]">Tema de Cores</span>
             <button
               onClick={toggleTheme}
               className="px-4 py-1.5 rounded-full bg-[#12202f] border border-white/20 text-xs text-[#38C6D8] font-mono font-bold"
@@ -226,9 +226,9 @@ export default function Navbar() {
           <a
             href="#contato"
             onClick={() => setMobileMenuOpen(false)}
-            className="w-full inline-flex justify-center items-center py-3.5 rounded-full bg-[#38C6D8] text-[#0a1420] font-display font-semibold"
+            className="w-full inline-flex justify-center items-center py-3.5 rounded-full bg-[#38C6D8] text-[#0a1420] font-display font-semibold text-sm shadow-lg shadow-[#38C6D8]/20"
           >
-            Falar com Arquiteto
+            Falar com Comercial
           </a>
         </div>
       )}

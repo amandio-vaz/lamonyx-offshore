@@ -12,7 +12,7 @@ export default function LamonyxLogo({
   showSubtitle = true,
 }: LamonyxLogoProps) {
   return (
-    <div className={`flex items-center gap-3 select-none ${className}`}>
+    <div className={`flex items-center gap-2.5 sm:gap-3 select-none ${className}`}>
       {/* Target Radar Icon (Left) */}
       <div className="relative flex items-center justify-center shrink-0">
         <svg
@@ -47,7 +47,7 @@ export default function LamonyxLogo({
 
       {/* Horizontal Brand Typography "LAMONYX" */}
       <div className="flex flex-col">
-        <div className="flex items-center tracking-[0.14em] font-display font-bold text-xl sm:text-2xl leading-none text-theme-heading">
+        <div className="flex items-center tracking-[0.14em] font-display font-bold text-lg sm:text-2xl leading-none text-theme-heading">
           <span>LAMONY</span>
           {/* Stylized X with Cyan Flare */}
           <span className="relative inline-block text-[#38C6D8]">
@@ -56,7 +56,7 @@ export default function LamonyxLogo({
           </span>
         </div>
         {showSubtitle && (
-          <span className="font-mono-tag text-[0.55rem] sm:text-[0.6rem] text-[#38C6D8] tracking-[0.22em] mt-1 font-semibold whitespace-nowrap">
+          <span className="font-mono-tag text-[0.5rem] sm:text-[0.6rem] text-[#38C6D8] tracking-[0.2em] sm:tracking-[0.22em] mt-1 font-semibold whitespace-nowrap">
             INTELLIGENT ECOSYSTEMS
           </span>
         )}

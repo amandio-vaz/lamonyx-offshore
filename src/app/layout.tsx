@@ -81,6 +81,14 @@ export const metadata: Metadata = {
     description:
       "Ecossistemas inteligentes que monitoram, protegem, automatizam e antecipam riscos em operações críticas.",
   },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-icon", sizes: "180x180", type: "image/png" },
+    ],
+  },
   robots: {
     index: true,
     follow: true,

@@ -104,9 +104,9 @@ export default function Footer() {
         <div className="pt-8 border-t border-theme flex flex-col sm:flex-row items-center justify-between text-xs text-theme-body gap-4">
           <p>© {new Date().getFullYear()} Lamonyx Technologies. Todos os direitos reservados.</p>
           <div className="flex gap-6 font-mono text-[0.7rem]">
-            <a href="#top" className="hover:text-[#38C6D8] transition-colors">Política de Privacidade</a>
-            <a href="#top" className="hover:text-[#38C6D8] transition-colors">Termos de Uso</a>
-            <a href="#top" className="hover:text-[#38C6D8] transition-colors">Segurança & Governança</a>
+            <a href="/privacidade" className="hover:text-[#38C6D8] transition-colors">Política de Privacidade</a>
+            <a href="/termos" className="hover:text-[#38C6D8] transition-colors">Termos de Uso</a>
+            <a href="/governanca" className="hover:text-[#38C6D8] transition-colors">Segurança & Governança</a>
           </div>
         </div>
 

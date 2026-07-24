@@ -10,12 +10,12 @@ export default function ArchitectureFlow() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="font-mono-tag text-[#38C6D8] font-semibold">ARQUITETURA DE ALTÍSSIMA DISPONIBILIDADE</span>
-          <h2 className="font-display font-bold text-3xl sm:text-5xl text-theme-heading mt-3">
-            Edge-First. Cloud-Coordinated. NOC/SOC-Ready.
+          <span className="font-mono-tag text-[#38C6D8] font-semibold">ARQUITETURA DE RESILIÊNCIA OPERACIONAL</span>
+          <h2 className="font-display font-bold text-3xl sm:text-5xl text-theme-heading mt-3 leading-tight">
+            Autonomia local, inteligência em nuvem e comando operacional 24x7.
           </h2>
-          <p className="mt-4 text-theme-body text-base sm:text-lg">
-            Três camadas independentes e integradas. Garantia de monitoramento contínuo mesmo com oscilação ou queda completa do link de comunicação.
+          <p className="mt-4 text-theme-body text-base sm:text-lg leading-relaxed">
+            Três camadas integradas que garantem monitoramento contínuo e proteção total, mesmo diante de instabilidades ou queda completa dos links de comunicação.
           </p>
         </div>
 

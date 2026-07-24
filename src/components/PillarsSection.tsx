@@ -71,18 +71,18 @@ const pillars: Pillar[] = [
 
 export default function PillarsSection() {
   return (
-    <section id="solucoes" className="py-28 relative wash-section border-b border-white/5">
+    <section id="solucoes" className="py-28 relative wash-section border-b border-theme transition-colors">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <span className="font-mono-tag text-[#38C6D8] font-semibold">ARQUITETURA DE SOLUÇÕES COMPLETA</span>
-            <h2 className="font-display font-bold text-3xl sm:text-5xl text-white mt-3 leading-tight max-w-2xl">
+            <h2 className="font-display font-bold text-3xl sm:text-5xl text-theme-heading mt-3 leading-tight max-w-2xl">
               Quatro pilares para uma infraestrutura inabalável.
             </h2>
           </div>
-          <p className="text-[#90a3b4] text-base max-w-md">
+          <p className="text-theme-body text-base max-w-md">
             Do perímetro da rede ao backup imutável na nuvem, cobrimos todo o ciclo de vida da segurança e disponibilidade do seu ambiente.
           </p>
         </div>
@@ -96,7 +96,7 @@ export default function PillarsSection() {
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-3xl font-bold text-white/30 group-hover:text-[#38C6D8] transition-colors">
+                  <span className="font-mono text-3xl font-bold text-theme-body/40 group-hover:text-[#38C6D8] transition-colors">
                     {pillar.number}
                   </span>
                   <span className={`font-mono-tag px-3 py-1 rounded-full text-xs font-semibold border ${pillar.badgeColor}`}>
@@ -104,20 +104,20 @@ export default function PillarsSection() {
                   </span>
                 </div>
 
-                <span className="font-mono-tag text-xs text-[#90a3b4]">{pillar.subtitle}</span>
-                <h3 className="font-display font-bold text-2xl sm:text-3xl text-white mt-1 mb-4">
+                <span className="font-mono-tag text-xs text-theme-body">{pillar.subtitle}</span>
+                <h3 className="font-display font-bold text-2xl sm:text-3xl text-theme-heading mt-1 mb-4">
                   {pillar.title}
                 </h3>
-                <p className="text-[#90a3b4] text-base leading-relaxed mb-8">
+                <p className="text-theme-body text-base leading-relaxed mb-8">
                   {pillar.description}
                 </p>
               </div>
 
-              <div className="space-y-3 pt-6 border-t border-white/10">
+              <div className="space-y-3 pt-6 border-t border-theme">
                 {pillar.features.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-3">
                     <span className="text-[#38C6D8] font-bold text-sm mt-0.5">›</span>
-                    <span className="text-white/90 text-sm">{feature}</span>
+                    <span className="text-theme-heading text-sm font-medium">{feature}</span>
                   </div>
                 ))}
               </div>

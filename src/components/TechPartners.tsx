@@ -46,11 +46,11 @@ const capabilities: TechCapability[] = [
   },
   {
     id: "ai-engine",
-    name: "Motor de IA Operacional",
-    category: "Inteligência Artificial & Automação SOAR",
-    tag: "AUTOMAÇÃO",
-    description: "Motor proprietário de IA para correlação de eventos, triagem automática e redução drástica de alarmes falsos em operações 24x7.",
-    highlights: ["Detecção de Anomalias Comportamentais", "Redução de MTTR de horas para minutos", "Playbooks de Resposta Automática (SOAR)"],
+    name: "NOC/SOC & Observabilidade Inteligente",
+    category: "Monitoramento Contínuo & IA Operacional",
+    tag: "NOC/SOC INTELIGENTE",
+    description: "Operação integrada de NOC/SOC combinada com observabilidade profunda e inteligência artificial para correlação em tempo real, mitigação de riscos e resposta autônoma a incidentes.",
+    highlights: ["Monitoramento Contínuo 24x7 & Telemetria em Tempo Real", "Correlação de Eventos por IA (Zero Noise Alerting)", "Orquestração & Playbooks de Resposta Autônoma (SOAR)"],
   },
 ];
 
@@ -93,7 +93,7 @@ export default function TechPartners() {
           <div className="lg:col-span-7">
             <span className="font-mono-tag text-[#38C6D8] text-xs font-semibold">{activeCap.category}</span>
             <h3 className="font-display font-bold text-2xl sm:text-3xl text-theme-heading mt-2 mb-4">
-              {activeCap.name} + Lamonyx
+              {activeCap.name} com IA
             </h3>
             <p className="text-theme-body text-base leading-relaxed mb-6">
               {activeCap.description}

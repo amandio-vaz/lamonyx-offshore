@@ -14,15 +14,15 @@ const pillars: Pillar[] = [
   {
     number: "01",
     title: "Cibersegurança Integrada",
-    subtitle: "Fortinet & Cisco",
-    badge: "Defesa Perimetral & Zero Trust",
+    subtitle: "Segurança Perimetral & Zero Trust",
+    badge: "Defesa Perimetral Avançada",
     badgeColor: "border-[#38C6D8]/30 bg-[#38C6D8]/10 text-[#38C6D8]",
-    description: "Proteção em camadas unindo os melhores firewalls de próxima geração (NGFW), VPNs seguras, controle de acessos ZTNA e inspeção profunda de pacotes.",
+    description: "Proteção em camadas unindo Firewalls de Próxima Geração (NGFW), VPNs seguras, controle de acessos ZTNA e inspeção profunda de pacotes.",
     features: [
-      "Firewalls de alta performance (FortiGate & Cisco Firepower)",
-      "Gestão unificada de identidades & Zero-Trust Access",
+      "Firewalls de Próxima Geração (NGFW) de alta vazão",
+      "Gestão unificada de identidades & Zero-Trust Access (ZTNA)",
       "Segmentação de rede e proteção contra ataques DDoS",
-      "Defesa avançada de Endpoints e proteção contra malware",
+      "Defesa avançada de Endpoints e mitigação de ameaças",
     ],
   },
   {
@@ -42,8 +42,8 @@ const pillars: Pillar[] = [
   {
     number: "03",
     title: "Continuidade & Resiliência",
-    subtitle: "Veeam Anti-Ransomware",
-    badge: "Disaster Recovery & Backup Imutável",
+    subtitle: "Backup Imutável & Disaster Recovery",
+    badge: "Proteção Anti-Ransomware",
     badgeColor: "border-[#E3A94E]/30 bg-[#E3A94E]/10 text-[#E3A94E]",
     description: "Garanta a sobrevivência do seu negócio mesmo diante de falhas de hardware, desastres naturais ou ataques violentos de ransomware.",
     features: [
@@ -61,7 +61,7 @@ const pillars: Pillar[] = [
     badgeColor: "border-[#E5654B]/30 bg-[#E5654B]/10 text-[#E5654B]",
     description: "Construa e dimensione aplicações modernas em nuvens públicas, privadas ou híbridas com suporte total a microsserviços e alta disponibilidade.",
     features: [
-      "Orquestração avançada com Kubernetes e Docker",
+      "Orquestração avançada com Kubernetes e Docker Engine",
       "Failover automático e balanceamento de carga inteligente",
       "Automação CI/CD e Infraestrutura como Código (IaC)",
       "Arquitetura escalável de ultra-baixa latência",

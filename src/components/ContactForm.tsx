@@ -128,9 +128,9 @@ export default function ContactForm() {
                 <div>
                   <label className="font-mono-tag text-xs text-[#90a3b4] block mb-2">ÁREA DE INTERESSE PRINCIPAL *</label>
                   <select className="w-full bg-[#0a1420] border border-white/10 rounded-xl px-4 py-3.5 text-white focus:border-[#38C6D8] outline-none text-sm transition-colors">
-                    <option>Cibersegurança (Fortinet / Cisco)</option>
+                    <option>Cibersegurança & Defesa Perimetral</option>
                     <option>Observabilidade & IA Preditiva</option>
-                    <option>Backup & Disaster Recovery (Veeam)</option>
+                    <option>Backup Imutável & Disaster Recovery</option>
                     <option>Cloud, Kubernetes & Microsserviços</option>
                     <option>NOC / SOC 24x7 Dedicado</option>
                     <option>Diagnóstico 360 & Consultoria Completa</option>

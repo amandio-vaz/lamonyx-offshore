@@ -23,15 +23,16 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "Lamonyx — Cibersegurança, Observabilidade e Continuidade de Negócios",
   description:
-    "A Lamonyx integra tecnologias líderes (Fortinet, Cisco, Veeam) com Inteligência Artificial e Cloud Native para monitorar, proteger, automatizar e antecipar riscos em operações críticas.",
+    "A Lamonyx integra soluções de Cibersegurança Perimetral, Redes Enterprise e Backup Imutável com Inteligência Artificial e Cloud Native para monitorar, proteger, automatizar e antecipar riscos em operações críticas.",
   keywords: [
     "Lamonyx",
     "Cibersegurança",
     "Observabilidade",
     "Continuidade de Negócios",
-    "Fortinet",
-    "Cisco",
-    "Veeam",
+    "Segurança Perimetral",
+    "Redes Enterprise",
+    "Backup Imutável",
+    "Disaster Recovery",
     "Cloud Computing",
     "Containers",
     "Inteligência Artificial",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lamonyx — Ecossistemas Inteligentes de Cibersegurança & Continuidade",
     description:
-      "Soluções integradas com Fortinet, Cisco e Veeam, impulsionadas por IA e Cloud Native para operações ultra-resilientes.",
+      "Soluções integradas de segurança e resiliência, impulsionadas por IA e Cloud Native para operações ultra-resilientes.",
     url: "https://lamonyx.com.br",
     siteName: "Lamonyx",
     locale: "pt_BR",

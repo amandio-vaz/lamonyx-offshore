@@ -7,7 +7,7 @@ export default function Footer() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
           
-          {/* Col 1 & 2: Brand Info & Compliance */}
+          {/* Col 1 & 2: Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg bg-[#38C6D8]/10 border border-[#38C6D8]/30 flex items-center justify-center text-[#38C6D8] font-bold">
@@ -19,15 +19,13 @@ export default function Footer() {
             <p className="text-sm leading-relaxed max-w-sm">
               Mais do que implementar tecnologia, a Lamonyx constrói ecossistemas inteligentes capazes de monitorar, proteger, automatizar e antecipar riscos.
             </p>
-
-
           </div>
 
           {/* Col 3: Soluções */}
           <div className="space-y-3">
             <h4 className="font-mono-tag text-xs text-white font-semibold">SOLUÇÕES</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#solucoes" className="hover:text-[#38C6D8] transition-colors">Cibersegurança Fortinet/Cisco</a></li>
+              <li><a href="#solucoes" className="hover:text-[#38C6D8] transition-colors">Cibersegurança Perimetral</a></li>
               <li><a href="#solucoes" className="hover:text-[#38C6D8] transition-colors">Observabilidade & IA</a></li>
               <li><a href="#solucoes" className="hover:text-[#38C6D8] transition-colors">Backup & Disaster Recovery</a></li>
               <li><a href="#solucoes" className="hover:text-[#38C6D8] transition-colors">Containers & Kubernetes</a></li>
@@ -39,17 +37,16 @@ export default function Footer() {
           <div className="space-y-3">
             <h4 className="font-mono-tag text-xs text-white font-semibold">ARQUITETURA & TECNOLOGIA</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#parceiros" className="hover:text-[#38C6D8] transition-colors">Fortinet Integration</a></li>
-              <li><a href="#parceiros" className="hover:text-[#38C6D8] transition-colors">Cisco Security</a></li>
-              <li><a href="#parceiros" className="hover:text-[#38C6D8] transition-colors">Veeam Anti-Ransomware</a></li>
+              <li><a href="#ecossistema" className="hover:text-[#38C6D8] transition-colors">Segurança & Firewalls</a></li>
+              <li><a href="#ecossistema" className="hover:text-[#38C6D8] transition-colors">Redes & Conectividade</a></li>
+              <li><a href="#ecossistema" className="hover:text-[#38C6D8] transition-colors">Backup Imutável & DR</a></li>
               <li><a href="#arquitetura" className="hover:text-[#38C6D8] transition-colors">Edge & Resiliência</a></li>
-              <li><a href="#simulador" className="hover:text-[#38C6D8] transition-colors">Calculadora de MTTR</a></li>
             </ul>
           </div>
 
           {/* Col 5: NOC Status */}
           <div className="space-y-3">
-            <h4 className="font-mono-tag text-xs text-white font-semibold">OPERAÇÃO CONTINUA</h4>
+            <h4 className="font-mono-tag text-xs text-white font-semibold">OPERAÇÃO CONTÍNUA</h4>
             <div className="p-4 rounded-xl bg-[#12202f] border border-white/10 space-y-2">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#46C48E] animate-pulse" />

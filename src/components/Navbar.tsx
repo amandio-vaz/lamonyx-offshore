@@ -78,22 +78,16 @@ export default function Navbar() {
             Soluções
           </a>
           <a
-            href="#parceiros"
+            href="#ecossistema"
             className="font-mono-tag text-[#90a3b4] hover:text-[#38C6D8] transition-colors duration-150"
           >
-            Parceiros Líderes
+            Ecossistema Tecnológico
           </a>
           <a
             href="#arquitetura"
             className="font-mono-tag text-[#90a3b4] hover:text-[#38C6D8] transition-colors duration-150"
           >
             Arquitetura & IA
-          </a>
-          <a
-            href="#simulador"
-            className="font-mono-tag text-[#90a3b4] hover:text-[#38C6D8] transition-colors duration-150"
-          >
-            Simulador MTTR
           </a>
           <a
             href="#contato"
@@ -158,11 +152,11 @@ export default function Navbar() {
             Soluções
           </a>
           <a
-            href="#parceiros"
+            href="#ecossistema"
             onClick={() => setMobileMenuOpen(false)}
             className="block font-mono-tag text-lg text-[#90a3b4] hover:text-[#38C6D8]"
           >
-            Parceiros Líderes
+            Ecossistema Tecnológico
           </a>
           <a
             href="#arquitetura"
@@ -170,13 +164,6 @@ export default function Navbar() {
             className="block font-mono-tag text-lg text-[#90a3b4] hover:text-[#38C6D8]"
           >
             Arquitetura & IA
-          </a>
-          <a
-            href="#simulador"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block font-mono-tag text-lg text-[#90a3b4] hover:text-[#38C6D8]"
-          >
-            Simulador MTTR
           </a>
           <a
             href="#contato"

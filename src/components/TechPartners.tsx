@@ -2,99 +2,105 @@
 
 import { useState } from "react";
 
-interface PartnerInfo {
+interface TechCapability {
   id: string;
   name: string;
   category: string;
   description: string;
   highlights: string[];
+  tag: string;
 }
 
-const partners: PartnerInfo[] = [
+const capabilities: TechCapability[] = [
   {
-    id: "fortinet",
-    name: "Fortinet",
-    category: "Cibersegurança & Firewall Perimetral",
-    description: "Integração nativa de FortiGate, SD-WAN seguro e arquiteturas Zero-Trust (ZTNA) para proteção contínua de bordas e filiais.",
-    highlights: ["Next-Gen Firewall (NGFW)", "Inspeção SSL/TLS de alta performance", "SD-WAN integrada & ZTNA"],
+    id: "perimetral",
+    name: "Segurança Perimetral",
+    category: "Firewalls de Próxima Geração & ZTNA",
+    tag: "DEFESA DE BORDA",
+    description: "Inspeção profunda de pacotes, SD-WAN seguro e arquiteturas Zero-Trust (ZTNA) para proteção contínua de bordas, filiais e ambientes críticos.",
+    highlights: ["Firewalls de Próxima Geração (NGFW)", "Inspeção SSL/TLS de alta vazão sem perda de performance", "SD-WAN integrada & Acesso Zero-Trust (ZTNA)"],
   },
   {
-    id: "cisco",
-    name: "Cisco",
-    category: "Redes Críticas & Defesa Avançada",
-    description: "Infraestrutura de alta capacidade, conectividade resilitente e segurança de endpoint/identidade alimentada por inteligência de ameaças Cisco Talos.",
-    highlights: ["Switches & Roteadores de Alta Criticidade", "Cisco Umbrella & Secure Endpoint", "Arquitetura Zero-Trust"],
+    id: "enterprise-networks",
+    name: "Redes Enterprise",
+    category: "Conectividade Crítica & Alta Disponibilidade",
+    tag: "INFRAESTRUTURA",
+    description: "Infraestrutura de rede de alta capacidade, comutação resiliente e defesa de endpoints alimentada por inteligência de ameaças global.",
+    highlights: ["Switches & Roteadores de Alta Criticidade", "Proteção de Endpoints & DNS Seguro", "Arquitetura Zero-Trust para Redes Corporativas"],
   },
   {
-    id: "veeam",
-    name: "Veeam",
-    category: "Continuidade & Recovery Anti-Ransomware",
-    description: "Backup imutável e replicação instantânea de dados com garantia de RPO/RTO mínimos e proteção contra sequestro de dados.",
-    highlights: ["Storage Imutável WORM", "Instant VM Recovery & Orchestration", "Proteção Multi-Cloud"],
+    id: "immutable-backup",
+    name: "Backup Imutável",
+    category: "Continuidade & Disaster Recovery Anti-Ransomware",
+    tag: "RESILIÊNCIA",
+    description: "Armazenamento protegido e replicação instantânea de dados com garantia de RPO/RTO mínimos e blindagem total contra sequestro de dados.",
+    highlights: ["Storage Imutável com Tecnologia WORM", "Instant VM Recovery & Orquestração de Failover", "Proteção Multi-Cloud & Backup Criptografado"],
   },
   {
     id: "cloud-containers",
     name: "Cloud & Containers",
     category: "Kubernetes, Docker & Cloud Native",
+    tag: "ESCALABILIDADE",
     description: "Desenvolvimento e orquestração de microsserviços em nuvem pública ou híbrida com isolamento, auto-scaling e alta disponibilidade.",
-    highlights: ["Kubernetes & Docker Engine", "Auto-scaling & Failover automático", "Infraestrutura como Código (IaC)"],
+    highlights: ["Kubernetes & Docker Engine Orquestrado", "Auto-scaling & Failover automático de clusters", "Infraestrutura como Código (IaC) & CI/CD"],
   },
   {
     id: "ai-engine",
-    name: "AI Engine",
-    category: "Inteligência Artificial Operacional",
+    name: "Motor de IA Operacional",
+    category: "Inteligência Artificial & Automação SOAR",
+    tag: "AUTOMAÇÃO",
     description: "Motor proprietário de IA para correlação de eventos, triagem automática e redução drástica de alarmes falsos em operações 24x7.",
-    highlights: ["Detecção de Anomalias Comportamentais", "Redução de MTTR de horas para minutos", "Playbooks de Resposta Automática"],
+    highlights: ["Detecção de Anomalias Comportamentais", "Redução de MTTR de horas para minutos", "Playbooks de Resposta Automática (SOAR)"],
   },
 ];
 
 export default function TechPartners() {
-  const [activePartner, setActivePartner] = useState<PartnerInfo>(partners[0]);
+  const [activeCap, setActiveCap] = useState<TechCapability>(capabilities[0]);
 
   return (
-    <section id="parceiros" className="py-24 bg-[#0d1a26] border-b border-white/5 relative">
+    <section id="ecossistema" className="py-24 bg-[#0d1a26] border-b border-white/5 relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="font-mono-tag text-[#38C6D8] font-semibold">STACK TECNOLÓGICO DE CLASSE MUNDIAL</span>
+          <span className="font-mono-tag text-[#38C6D8] font-semibold">ARQUITETURA & CAPACIDADES TECNOLÓGICAS</span>
           <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3">
-            Aliança estratégica com líderes globais da indústria.
+            Ecossistema robusto de classe mundial.
           </h2>
           <p className="mt-4 text-[#90a3b4] text-base sm:text-lg">
-            Combinamos a robustez das maiores plataformas de TI e Segurança do mundo com nossa inteligência em automação e containers.
+            Combinamos padrões globais de TI e Segurança com nossa inteligência em automação, infraestrutura em nuvem e containers.
           </p>
         </div>
 
-        {/* Partner Select Tabs */}
+        {/* Capability Select Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
-          {partners.map((partner) => (
+          {capabilities.map((cap) => (
             <button
-              key={partner.id}
-              onClick={() => setActivePartner(partner)}
+              key={cap.id}
+              onClick={() => setActiveCap(cap)}
               className={`px-5 py-3 rounded-full text-sm font-display font-semibold transition-all flex items-center gap-2 border ${
-                activePartner.id === partner.id
+                activeCap.id === cap.id
                   ? "bg-[#38C6D8] text-[#0a1420] border-[#38C6D8] shadow-lg shadow-[#38C6D8]/20 scale-105"
                   : "bg-[#12202f] text-white border-white/10 hover:border-[#38C6D8]/40 hover:bg-[#1a2d42]"
               }`}
             >
-              {partner.name}
+              {cap.name}
             </button>
           ))}
         </div>
 
-        {/* Active Partner Detail Card */}
+        {/* Active Capability Detail Card */}
         <div className="surface-card surface-glow rounded-3xl p-8 sm:p-12 grid lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
           <div className="lg:col-span-7">
-            <span className="font-mono-tag text-[#38C6D8] text-xs font-semibold">{activePartner.category}</span>
+            <span className="font-mono-tag text-[#38C6D8] text-xs font-semibold">{activeCap.category}</span>
             <h3 className="font-display font-bold text-2xl sm:text-3xl text-white mt-2 mb-4">
-              {activePartner.name} + Lamonyx
+              {activeCap.name} + Lamonyx
             </h3>
             <p className="text-[#90a3b4] text-base leading-relaxed mb-6">
-              {activePartner.description}
+              {activeCap.description}
             </p>
             
             <div className="space-y-3">
-              {activePartner.highlights.map((item, idx) => (
+              {activeCap.highlights.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-3">
                   <div className="w-5 h-5 rounded-full bg-[#38C6D8]/20 border border-[#38C6D8] flex items-center justify-center text-[#38C6D8] text-xs font-bold">
                     ✓
@@ -106,16 +112,16 @@ export default function TechPartners() {
           </div>
 
           <div className="lg:col-span-5 bg-[#0a1420]/80 rounded-2xl p-6 border border-white/10 flex flex-col justify-center items-center text-center">
-            <div className="w-16 h-16 rounded-2xl bg-[#38C6D8]/10 border border-[#38C6D8]/30 flex items-center justify-center text-[#38C6D8] text-2xl font-bold font-mono mb-4">
-              {activePartner.name.substring(0, 2).toUpperCase()}
+            <div className="px-3 py-1.5 rounded-full bg-[#38C6D8]/10 border border-[#38C6D8]/30 text-[#38C6D8] text-xs font-mono font-bold tracking-widest mb-4">
+              {activeCap.tag}
             </div>
-            <h4 className="font-display font-bold text-lg text-white mb-1">{activePartner.name} Integrated</h4>
-            <p className="text-xs text-[#90a3b4] mb-4">Arquitetura validada e monitorada em tempo real pelo time Lamonyx.</p>
+            <h4 className="font-display font-bold text-lg text-white mb-1">{activeCap.name}</h4>
+            <p className="text-xs text-[#90a3b4] mb-4">Arquitetura integrada e monitorada continuamente pelo NOC/SOC Lamonyx.</p>
             <a
               href="#contato"
               className="inline-flex items-center gap-2 text-xs font-mono-tag text-[#38C6D8] hover:underline"
             >
-              SOLICITAR ESPECIFICAÇÃO DE PROJETO &rarr;
+              SOLICITAR PROJETO CUSTOMIZADO &rarr;
             </a>
           </div>
         </div>

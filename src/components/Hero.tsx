@@ -19,7 +19,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-7 text-lg sm:text-xl text-[#90a3b4] leading-relaxed max-w-xl">
-            Integramos a força das tecnologias líderes — <strong className="text-white">Fortinet, Cisco e Veeam</strong> — a arquiteturas modernas em <strong className="text-[#38C6D8]">Nuvem, Containers e Inteligência Artificial</strong> para garantir alta resiliência e continuidade operacional.
+            Integramos a força de <strong className="text-white">tecnologias líderes em Segurança Perimetral, Redes Enterprise e Backup Imutável</strong> a arquiteturas modernas em <strong className="text-[#38C6D8]">Nuvem, Containers e Inteligência Artificial</strong> para garantir alta resiliência e continuidade operacional.
           </p>
 
           {/* CTA Buttons */}
@@ -84,7 +84,7 @@ export default function Hero() {
 
             <div className="space-y-3">
               <div className="flex items-center justify-between text-xs">
-                <span className="text-[#90a3b4]">Cibersegurança (Fortinet / Cisco)</span>
+                <span className="text-[#90a3b4]">Cibersegurança & Defesa Perimetral</span>
                 <span className="text-[#46C48E] font-mono">100% Protegido</span>
               </div>
               <div className="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
@@ -100,7 +100,7 @@ export default function Hero() {
               </div>
 
               <div className="flex items-center justify-between text-xs pt-1">
-                <span className="text-[#90a3b4]">Backup & DR (Veeam)</span>
+                <span className="text-[#90a3b4]">Backup Imutável & Recovery</span>
                 <span className="text-white font-mono">Imutável OK</span>
               </div>
               <div className="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">

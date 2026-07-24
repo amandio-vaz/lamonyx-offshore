@@ -85,7 +85,7 @@ export default function ArchitectureFlow() {
                 <ul className="space-y-3 text-sm text-white/90">
                   <li className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#38C6D8]" />
-                    Coleta local de firewalls Fortinet e roteadores Cisco via API/Syslog
+                    Coleta local de Firewalls de Próxima Geração e Roteadores Enterprise via API/Syslog
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#38C6D8]" />
@@ -99,7 +99,7 @@ export default function ArchitectureFlow() {
               </div>
               <div className="bg-[#0a1420] rounded-2xl p-6 border border-white/10 font-mono text-xs text-[#90a3b4] space-y-2">
                 <div className="text-[#46C48E] font-bold">[LOCAL_COLLECTOR] STATUS: OPERATIONAL</div>
-                <div>&gt; Syncing FortiGate API events... 1,420 eps</div>
+                <div>&gt; Syncing Security Gateway API events... 1,420 eps</div>
                 <div>&gt; Local buffer level: 0.04% (Nominal)</div>
                 <div>&gt; Uplink connection: Active (50ms latency)</div>
                 <div className="text-[#38C6D8]">&gt; mTLS Tunnel: ESTABLISHED & SECURE</div>
@@ -110,7 +110,7 @@ export default function ArchitectureFlow() {
           {selectedTier === 2 && (
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
-                <span className="font-mono-tag text-[#38C6D8] font-semibold">MOTOR DE INTELGÊNCIA & PROCESSAMENTO</span>
+                <span className="font-mono-tag text-[#38C6D8] font-semibold">MOTOR DE INTELIGÊNCIA & PROCESSAMENTO</span>
                 <h3 className="font-display font-bold text-3xl text-white mt-2 mb-4">
                   02. Nuvem Lamonyx & Correlacionador IA
                 </h3>
@@ -145,7 +145,7 @@ export default function ArchitectureFlow() {
           {selectedTier === 3 && (
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
-                <span className="font-mono-tag text-[#38C6D8] font-semibold">COMANDO OPERACIONAL CONTINUO</span>
+                <span className="font-mono-tag text-[#38C6D8] font-semibold">COMANDO OPERACIONAL CONTÍNUO</span>
                 <h3 className="font-display font-bold text-3xl text-white mt-2 mb-4">
                   03. Central NOC / SOC 24x7
                 </h3>
